@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+type: LoadBalancer
+metadata:
+  name: myapp
+  labels:
+    chacha: vidhayak
+spec:
+  ports:
+  - port: 80
+    targetPort: 80

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    chacha: vidhayak
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      chacha: vidhayak
+  template:
+    metadata:
+      labels:
+        chacha: vidhayak
+    spec:
+      containers:
+      - name: wowcontainer
+        image: sonambewafaa/hellodhondhu:latest
+        ports:
+        - containerPort: 80
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
