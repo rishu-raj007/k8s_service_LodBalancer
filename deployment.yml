@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: wowcontainer
-        image: sonambewafaa/hellodhondhu:latest
+        image: my-deployment
         ports:
         - containerPort: 80
   strategy:
